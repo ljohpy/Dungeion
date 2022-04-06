@@ -8,6 +8,9 @@
         private string _name;
         private int _bonusHitChance;
         private bool _isTwoHanded;
+        private string  _weaponType;
+        
+
 
         //PROPERTIES
 
@@ -31,6 +34,11 @@
             get { return _bonusHitChance; }
             set { _bonusHitChance = value; }
         }
+        public string WeaponType
+        {
+            get { return _weaponType; }
+            set { _weaponType = value; }
+        }
         public bool IsTwoHanded
         {
             get { return _isTwoHanded; }
@@ -39,19 +47,20 @@
 
         //CONSTRUCTORS
 
-        public Weapon(int minDamage, int maxDamage, string name, int bonusHitChance, bool isTwoHanded)
+        public Weapon(int minDamage, int maxDamage, string name, int bonusHitChance, bool isTwoHanded,string weaponType)
         {
             MinDamage = minDamage;
             MaxDamage = maxDamage;
             Name = name;
             BonusHitChance = bonusHitChance;
             IsTwoHanded = isTwoHanded;
+            WeaponType = weaponType;
         }
 
         //METHODS
         public override string ToString()
         {
-            return string.Format($"Min Damage: {MinDamage}\nMaxDamage: {MaxDamage}\nName {Name}\n Bonuse Hit Change {BonusHitChance}\nIsTwoHanded {IsTwoHanded}");
+            return string.Format($"Min Damage: {MinDamage}\nMaxDamage: {MaxDamage}\nName {Name}\n Bonuse Hit Change {BonusHitChance}\nIsTwoHanded {IsTwoHanded}\nWeapon Type: {WeaponType}");
         }
     }
 }
