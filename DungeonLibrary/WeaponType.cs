@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
+    //Defaults to internal class - change to public enum
     public enum WeaponType
     {
-    sword = 1,
-    knife = 2,
-    projectile = 3,
-    laser = 4,
-
+        //Single values, no spaces, comma separated
+        Sword,
+        Dagger,
+        Bow,
+        Wand,
+        Axe,
+        Staff,
+        Mace
     }
 }
+

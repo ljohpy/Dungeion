@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
+    //Defaults to internal class - change to public enum
     public enum Race
     {
-       Orc = 1,
-       Human = 2,
-       Elf = 3,
-       Dwarf = 4,
-       Bob  = 5,
-
+        //Single values, no spaces, comma separated
+        Orc,
+        Human,
+        Elf,
+        Halfling,
+        Tabaxi,
+        Dwarf,
+        Tiefling,
+        Dragonborn
     }
-
 }
