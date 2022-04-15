@@ -6,40 +6,40 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Dragon : Monster
+    public class Demon : Monster
     {
-        public bool IsScaly { get; set; }
+        public bool IsVicious { get; set; }
 
-        public Dragon(string name, int life, int maxLife, int hitChance, int block, int minDamage,
-            int maxDamage, string description, bool isScaly)
+        public Demon(string name, int life, int maxLife, int hitChance, int block, int minDamage,
+            int maxDamage, string description, bool isVicious)
             : base(name, life, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
-            IsScaly = isScaly;
+            IsVicious = isVicious;
         }
 
-        public Dragon()
+        public Demon()
         {
-            Name = "Baby Dragon";
+            Name = "Baby Demon";
             MaxLife = 10;
             Life = 10;
             HitChance = 40;
             Block = 10;
             MinDamage = 1;
             MaxDamage = 5;
-            Description = "Though just a hatchling, this dragon is still dangerous.";
-            IsScaly = false;
+            Description = "Though just a baby, has been evil since birth.";
+            IsVicious = false;
         }
 
         public override string ToString()
         {
-            return base.ToString() + (IsScaly ? "Coated in thick scales" : "Has a soft, underdeveloped hide");
+            return base.ToString() + (IsVicious ? "Fire breathing eyes" : "Appears sweet, but don't trust a demon");
         }
 
         public override int CalcBlock()
         {
             int calculatedBlock = Block;
 
-            if (IsScaly)
+            if (IsVicious)
             {
                 calculatedBlock += calculatedBlock / 2;
             }

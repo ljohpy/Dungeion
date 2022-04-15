@@ -9,8 +9,7 @@ namespace DungeonLibrary
     //Make this class public and inherit from Character
     public class Monster : Character
     {
-        //We need custom business rules for min damage, 
-        //so we need to declare the field here.
+       
         private int _minDamage;
 
         //Auto-properties

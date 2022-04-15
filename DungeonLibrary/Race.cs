@@ -10,13 +10,16 @@ namespace DungeonLibrary
     public enum Race
     {
         //Single values, no spaces, comma separated
-        Orc,
+        
         Human,
-        Elf,
-        Halfling,
-        Tabaxi,
-        Dwarf,
-        Tiefling,
-        Dragonborn
+        Wolf,
+        Cat,
+        Witch,
+        Dragon,
+
+
+        
+        
+        
     }
 }

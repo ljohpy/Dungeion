@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Turtle : Monster
+    public class Zombie : Monster
     {
         public int BonusBlock { get; set; }
         public int HidePercent { get; set; }
 
-        public Turtle(string name, int life, int maxLife, int hitChance, int block, int minDamage,
+        public Zombie(string name, int life, int maxLife, int hitChance, int block, int minDamage,
             int maxDamage, string description, int bonusBlock, int hidePercent)
             : base(name, life, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
@@ -29,18 +29,17 @@ namespace DungeonLibrary
         {
             int calculatedBlock = Block;
 
-            //Generate a random number from 0-100
+         
             Random rand = new Random();
             int percent = rand.Next(101);
 
-            //Check if that's less than or equal to the hide percent
+          
             if (percent <= HidePercent)
             {
-                //If it is, add the bonus block
+                
                 calculatedBlock += BonusBlock;
             }
 
-            //Return the total
             return calculatedBlock;
         }
     }

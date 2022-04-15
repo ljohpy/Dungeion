@@ -11,11 +11,11 @@ namespace DungeonLibrary
     {
         //Single values, no spaces, comma separated
         Sword,
-        Dagger,
-        Bow,
-        Wand,
+        
+        Hammer,
+        Bat,
         Axe,
-        Staff,
+        Crowbar,
         Mace
     }
 }

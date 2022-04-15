@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Rabbit : Monster
+    public class Unicorn : Monster
     {
         public bool IsFluffy { get; set; }
 
-        public Rabbit(string name, int life, int maxLife, int hitChance, int block, int minDamage,
+        public Unicorn(string name, int life, int maxLife, int hitChance, int block, int minDamage,
             int maxDamage, string description, bool isFluffy)
             : base(name, life, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
             IsFluffy = isFluffy;
         }
 
-        public Rabbit()
+        public Unicorn()
         {
-            Name = "Baby Rabbit";
+            Name = "Baby Unicorn";
             MaxLife = 8;
             Life = 8;
             HitChance = 30;
@@ -39,7 +39,7 @@ namespace DungeonLibrary
         {
             int calculatedBlock = Block;
 
-            //Apply a 50% increase to the Rabbit's block if it's fluffy
+           
             if (IsFluffy)
             {
                 calculatedBlock += calculatedBlock / 2;
